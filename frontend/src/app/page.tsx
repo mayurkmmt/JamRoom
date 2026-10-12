@@ -139,13 +139,8 @@ export default function Home() {
       </main>
 
       {/* Footer */}
-      <footer className="py-6 px-4 sm:px-8 flex flex-col sm:flex-row justify-between items-center text-xs text-neutral-600 max-w-7xl mx-auto w-full gap-4 sm:gap-0">
+      <footer className="py-6 px-4 sm:px-8 flex justify-center items-center text-xs text-neutral-600 max-w-7xl mx-auto w-full">
         <div>© 2026 JamRoom OS. All rights reserved.</div>
-        <div className="flex gap-4 mt-4 sm:mt-0">
-          <a href="#" className="hover:text-neutral-300 transition-colors">Help Center</a>
-          <a href="#" className="hover:text-neutral-300 transition-colors">API Docs</a>
-          <a href="#" className="hover:text-neutral-300 transition-colors">Privacy Policy</a>
-        </div>
       </footer>
     </div>
   );

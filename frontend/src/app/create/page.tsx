@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { Globe, Lock, ChevronLeft, Check } from "lucide-react";
+import { ChevronLeft } from "lucide-react";
 import { useRoomStore } from "@/stores/roomStore";
 
 export default function CreateRoom() {
@@ -11,7 +11,6 @@ export default function CreateRoom() {
 
   const [roomName, setRoomName] = useState("");
   const [hostName, setHostName] = useState("");
-  const [allowGuestAdd, setAllowGuestAdd] = useState(true);
   const [isCreating, setIsCreating] = useState(false);
 
   const handleCreate = async (e: React.FormEvent) => {
@@ -79,25 +78,6 @@ export default function CreateRoom() {
               />
             </div>
 
-
-
-            <div className="flex items-center justify-between p-4 bg-white/5 border border-white/10 rounded-xl">
-              <div>
-                <h4 className="text-sm font-semibold text-white">Participant Permissions</h4>
-                <p className="text-xs text-neutral-400 mt-0.5">Guests can add songs to the shared queue</p>
-              </div>
-              <button
-                type="button"
-                onClick={() => setAllowGuestAdd(!allowGuestAdd)}
-                className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${allowGuestAdd ? "bg-fuchsia-500" : "bg-neutral-600"
-                  }`}
-              >
-                <span
-                  className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${allowGuestAdd ? "translate-x-6" : "translate-x-1"
-                    }`}
-                />
-              </button>
-            </div>
 
             <div className="pt-4 flex items-center justify-between gap-4">
               <button
